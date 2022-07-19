@@ -1,0 +1,23 @@
+{
+  "name": "sprint08_diaadiadev",
+  "version": "1.0.0",
+  "description": "aplicação para apoio no dia a dia do dev. vai ter uma rota para gravar dica e outra para devolver",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "dev"
+  ],
+  "author": "rachellesdev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "type": "module"
+}
