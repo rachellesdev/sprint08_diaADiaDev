@@ -1,10 +1,16 @@
-const dicaDoDev = (app) =>{
+import bdDicas from '../database/bd.js'
+
+const dicaDoDev = (app, dbDicas) =>{
     app.get('/tips', (req, res) => {
-        res.json({"msg": "mostrando dica aleatória"})
+        res.json({
+            "dicas": bdDicas.dicas[Math.floor(Math.random() * bdDicas.dicas.length)]
+        })
     })
 
     app.post('/create', (req, res) => {
-        res.json({"msg": "recebendo dica aleatória"})
+        const body = req.body
+        bdDicas.dicas.push(body.dicas)
+        res.json(body)
     })
 }
 
